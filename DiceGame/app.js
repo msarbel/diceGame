@@ -1,7 +1,7 @@
 
 
 // set variables
-var scores, roundScore, activePlayer, gamePlaying;
+var scores, roundScore, activePlayer, gamePlaying, prevDice;
 
 init();
 
@@ -40,13 +40,20 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         diceDOM.src = 'dice-' + dice + '.png';
 
         //update round score if(rolled number !one)
-        if(dice !== 1) {
+        if(dice === 6 && prevDice === 6) {
+          //lose score
+          scores[activePlayer] = 0;
+          document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+          nextPlayer();
+        } else if (dice !== 1) {
           //add score
           roundScore += dice;
           document.querySelector('#current-' + activePlayer).textContent = roundScore;
         } else {
           nextPlayer();
         }
+
+        prevDice = dice;
     }
 });
 
@@ -113,6 +120,8 @@ function init() {
 
     //add active class to first player
     document.querySelector('.player-0-panel').classList.add('active');
+
+    document.querySelector('.player-1-panel').classList.add('notActive')
 }
 
 

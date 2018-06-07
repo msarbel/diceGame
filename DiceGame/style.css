@@ -32,7 +32,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #B7C4CA;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
@@ -66,12 +66,14 @@ body {
     text-align: center;
     font-size: 80px;
     font-weight: 100;
-    color: #EB4D4D;
+    color: #4F4F4F;
     margin-bottom: 130px;
 }
 
-.active { background-color: #f7f7f7; }
+.active { background-color: #EEE5E9; }
 .active .player-name { font-weight: 300; }
+.active .player-score {color: #EB4D4D;}
+.active .player-current-box {background-color: #EB4D4D;}
 
 .active .player-name::after {
     content: "\2022";
@@ -83,8 +85,9 @@ body {
     
 }
 
+
 .player-current-box {
-    background-color: #EB4D4D;
+    background-color: #4F4F4F;
     color: #fff;
     width: 40%;
     margin: 0 auto;
@@ -121,7 +124,7 @@ button {
 input {
     position: absolute;
     transform: translateX(-50%);
-    width: 120px;
+    width: 150px;
     height: 50px;
     color: #555;
     padding: 10px;
@@ -129,7 +132,7 @@ input {
     top: 320px;
     border-radius: 10px;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Lato';
 }
 
