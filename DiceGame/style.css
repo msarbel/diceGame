@@ -118,6 +118,20 @@ button {
     font-weight: 300;
     transition: background-color 0.3s, color 0.3s;
 }
+input {
+    position: absolute;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 50px;
+    color: #555;
+    padding: 10px;
+    left: 50%;
+    top: 320px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Lato';
+}
 
 button:hover { font-weight: 600; }
 button:hover i { margin-right: 20px; }
@@ -140,6 +154,8 @@ i {
 .btn-new { top: 45px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
+
+
 
 .dice {
     position: absolute;
